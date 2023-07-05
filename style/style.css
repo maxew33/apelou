@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Taviraj&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -61,41 +61,101 @@ a:visited {
 
 html {
   scroll-behavior: smooth;
-}
-
-*,
-a {
   font-family: "Roboto";
 }
 
+:root {
+  --bg-p: red;
+}
+
+main section:nth-child(1) {
+  --bg-p: #E5F185;
+}
+
+main section:nth-child(2) {
+  --bg-p: #A6D5F2;
+}
+
+main section:nth-child(3) {
+  --bg-p: #F686BC;
+}
+
+main section:nth-child(4) {
+  --bg-p: #F9AD8A;
+}
+
+main section:nth-child(5) {
+  --bg-p: #FEEE7F;
+}
+
 body {
-  background: #abc;
+  background: #f9f9f9;
   height: 200vh;
   overflow-x: hidden;
 }
 
-header {
+.banner {
+  width: 100vw;
+  position: sticky;
+  top: 0;
+}
+.banner section {
   display: flex;
-  height: min(75px, 10vmin);
   padding: 1rem;
   align-items: center;
   justify-content: space-between;
+  height: min(75px, 10vmin);
+  border-bottom: 2px solid rgba(85, 85, 85, 0.3333333333);
+  background: rgba(255, 255, 255, 0.8666666667);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
-header .logo {
+.banner .logo {
   display: flex;
   align-items: baseline;
   gap: 0.5rem;
 }
-header h1 {
+.banner h1 {
   font-size: 2.5rem;
 }
-header img {
+.banner img {
   height: 3.5rem;
 }
-header nav {
+.banner nav {
   display: flex;
   justify-content: space-evenly;
   width: 50%;
+  max-width: 30rem;
+  align-self: flex-end;
+  font-size: 1.15rem;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0 5rem;
+  letter-spacing: 1.15;
+}
+h2 span {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+main {
+  max-width: 1600px;
+  margin: 4rem auto;
+}
+main section {
+  margin: 2rem auto;
+}
+main .presentation {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 1.75rem;
+  max-width: 75%;
+  line-height: 1.5;
+  font-family: "Taviraj";
+  font-style: italic;
 }
 
 .title {
@@ -105,26 +165,76 @@ header nav {
   background-attachment: fixed;
   background-size: cover;
 }
+.title .text {
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.3333333333) 30%, rgba(255, 255, 255, 0) 50%);
+}
 
 article {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 1600px;
   margin: auto;
-  gap: 2rem;
 }
 
-p {
-  width: 50vmin;
-  aspect-ratio: 5/2;
-  background: red;
+#school p {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+#school article p:nth-of-type(odd) .school-img {
+  border-top-left-radius: 7.5vmin;
+}
+#school article p:nth-of-type(even) .school-img {
+  border-top-right-radius: 7.5vmin;
+}
+
+.school-img {
+  width: 100%;
+  height: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.school-name {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+p, .links-link {
+  width: 30vw;
+  min-width: 20rem;
+  background: var(--bg-p);
   line-height: 1.5;
   font-size: 1.5rem;
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
   padding: 2rem;
   border-radius: 0 10vmin 0 10vmin;
 }
+
 p:nth-child(odd) {
   border-radius: 10vmin 0 10vmin 0;
+}
+
+#links article {
+  flex-wrap: wrap;
+}
+
+.links-link {
+  margin: 1rem auto;
+  height: 5rem;
+}
+
+.pills {
+  border-radius: 10vmin;
 }/*# sourceMappingURL=style.css.map */

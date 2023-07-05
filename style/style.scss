@@ -1,47 +1,97 @@
 @import './base/reset', './utils/mixins', './utils/variables';
-html{
+html {
     scroll-behavior: smooth;
-}
-*,
-a {
     font-family: 'Roboto';
 }
 
-body{
-    background: #abc;
+:root {
+    --bg-p: red;
+}
+
+@each $color in $colors {
+    main {
+        section:nth-child(#{nth($color, 1)}) {
+            --bg-p: #{nth($color, 2)};
+        }
+    }
+}
+
+body {
+    background: #f9f9f9;
     height: 200vh;
     overflow-x: hidden;
 }
 
-header{
-    display: flex;
-    height: min(75px, 10vmin);
-    padding: 1rem;
-    align-items: center;
-    justify-content: space-between;
+.banner {
+    width: 100vw;
+    position: sticky;
+    top: 0;
 
-    .logo{
+    section {
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        height: min(75px, 10vmin);
+        border-bottom: 2px solid #5555;
+        background: #fffd;
+        backdrop-filter: blur(5px);
+    }
+
+    .logo {
         display: flex;
         align-items: baseline;
-        gap:.5rem;
+        gap: 0.5rem;
     }
 
-    h1{
+    h1 {
         font-size: 2.5rem;
-
     }
 
-    img{
+    img {
         height: 3.5rem;
     }
 
-    nav{
+    nav {
         display: flex;
         justify-content: space-evenly;
         width: 50%;
+        max-width: 30rem;
+        align-self: flex-end;
+        font-size: 1.15rem;
+        text-transform: capitalize;
     }
 }
 
+h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0 5rem;
+    letter-spacing: 1.15;
+
+    span {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+}
+
+main {
+    max-width: 1600px;
+    margin: 4rem auto;
+
+    section {
+        margin: 2rem auto;
+    }
+
+    .presentation {
+        text-align: center;
+        margin: 2rem auto;
+        font-size: 1.75rem;
+        max-width: 75%;
+        line-height: 1.5;
+        font-family: 'Taviraj';
+        font-style: italic;
+    }
+}
 
 .title {
     width: 100%;
@@ -49,26 +99,87 @@ header{
     background-image: url('../img/leohoho-rngTKHXumy0-unsplash.jpg');
     background-attachment: fixed;
     background-size: cover;
+
+    .text {
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(closest-side, #ffffff55 30%, #ffffff00 50%);
+    }
 }
 
-article{
+article {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 1600px;
     margin: auto;
-    gap: 2rem;
+    // gap: 2rem;
 }
 
-p{
-    width: 50vmin;
-    aspect-ratio: 5/2;
-    background: red;
+#school{
+    p {
+        display: flex;
+        gap:.5rem;
+        font-size: 1.25rem;
+    }
+
+    article{
+        p:nth-of-type(odd) .school-img{
+        border-top-left-radius: 7.5vmin;
+        }
+        
+        p:nth-of-type(even) .school-img{
+            border-top-right-radius: 7.5vmin;
+            }
+    }
+
+} 
+
+.school-img{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+}
+
+.school-name{
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+p, .links-link {
+    width: 30vw;
+    min-width: 20rem;
+    background: var(--bg-p);
     line-height: 1.5;
     font-size: 1.5rem;
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
     padding: 2rem;
     border-radius: 0 10vmin 0 10vmin;
-&:nth-child(odd){
+}
+
+p:nth-child(odd) {
     border-radius: 10vmin 0 10vmin 0;
-}}
+}
+
+#links{
+    article{
+        flex-wrap: wrap;
+    }
+}
+
+.links-link {
+    margin: 1rem auto;
+    height: 5rem;
+}
+
+.pills{
+    border-radius: 10vmin;
+}
