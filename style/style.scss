@@ -1,0 +1,74 @@
+@import './base/reset', './utils/mixins', './utils/variables';
+html{
+    scroll-behavior: smooth;
+}
+*,
+a {
+    font-family: 'Roboto';
+}
+
+body{
+    background: #abc;
+    height: 200vh;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    height: min(75px, 10vmin);
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+        display: flex;
+        align-items: baseline;
+        gap:.5rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+
+    }
+
+    img{
+        height: 3.5rem;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+}
+
+
+.title {
+    width: 100%;
+    aspect-ratio: 15/2;
+    background-image: url('../img/leohoho-rngTKHXumy0-unsplash.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+article{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: auto;
+    gap: 2rem;
+}
+
+p{
+    width: 50vmin;
+    aspect-ratio: 5/2;
+    background: red;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+    border-radius: 0 10vmin 0 10vmin;
+&:nth-child(odd){
+    border-radius: 10vmin 0 10vmin 0;
+}}
