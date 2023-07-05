@@ -2,9 +2,62 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>APE'Lou</title>
+
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./img/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./img/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./img/favicon/favicon-16x16.png"
+        />
+
+        <!-- Primary Meta Tags -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="Description"
+            content="ohmyfood vous permet de commander en ligne votre repas et réduit l'attente sur place."
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://maxew33.github.io/ohmyfood/index.html"
+        />
+        <meta property="og:title" content="APE'Lou" />
+        <meta
+            property="og:description"
+            content="Association de parents d'élèves loubésiens dynamique et collaborative où chacun peut apporter ses idées pour assurer l'épanouissement et la réussite de nos enfants."
+        />
+        <meta property="og:image" content="" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="" />
+        <meta property="twitter:title" content="ohmyfood" />
+        <meta
+            property="twitter:description"
+            content="Association de parents d'élèves loubésiens dynamique et collaborative où chacun peut apporter ses idées pour assurer l'épanouissement et la réussite de nos enfants."
+        />
+        <meta property="twitter:image" content="" />
+
         <link rel="stylesheet" href="./style/style.css" />
+        <script
+            src="https://kit.fontawesome.com/a53308940c.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
         <header class="banner">
@@ -35,11 +88,11 @@
                     l'épanouissement et la réussite de nos enfants.
                 </div>
                 <article>
-                    <p>
+                    <p class="semi-pills">
                         L'APE'Lou a pour objectif de renforcer la collaboration
                         et la solidarité entre parents.
                     </p>
-                    <p>
+                    <p class="semi-pills">
                         L'APE'Lou se veut également un espace de partage,
                         d'échange et d'entraide.
                     </p>
@@ -57,7 +110,7 @@
                 <div class="presentation">Écoles Maternelles.</div>
 
                 <article>
-                    <p>
+                    <p class="semi-pills">
                         <img
                             src="./img/ecoleib.jpg"
                             alt="école Ile Bleue"
@@ -75,7 +128,7 @@
                             ce.0332712u@ac-bordeaux.fr
                         </a>
                     </p>
-                    <p>
+                    <p class="semi-pills">
                         <img
                             src="./img/ecolejdf.jpg"
                             alt="école Jean de la Fontaine"
@@ -93,7 +146,7 @@
                 </article>
                 <div class="presentation">Écoles Élémentaires.</div>
                 <article>
-                    <p>
+                    <p class="semi-pills">
                         <img
                             src="./img/ecolepjt.jpg"
                             alt="école Paul Jean Toulet"
@@ -109,7 +162,7 @@
                             ce.0331175y@ac-bordeaux.fr
                         </a>
                     </p>
-                    <p>
+                    <p class="semi-pills">
                         <img
                             src="./img/ecolehd.jpg"
                             alt="école Hector Ducamp"
@@ -155,23 +208,26 @@
                     Pour nous contacter ou nous suivre, rien de plus facile !
                 </div>
                 <article>
-                    <p>
-                        par mail :
-                        <a href="mailto:apelou33450@gmail.com"
-                            >apelou33450@gmail.com</a
-                        >
-                    </p>
-                    <p>
-                        facebook :
-                        <a
-                            href="https://www.facebook.com/profile.php?id=100094055694188"
-                            >APE'Lou</a
-                        >
-                    </p>
+                    <a
+                        href="mailto:apelou33450@gmail.com"
+                        class="links-link pills"
+                    >
+                    <i class="fa-solid fa-envelope"></i> apelou33450@gmail.com
+                    </a>
+                    <a
+                        href="https://www.facebook.com/profile.php?id=100094055694188"
+                        class="links-link pills"
+                    >
+                        <i class="fa-brands fa-facebook"></i> APE'Lou
+                    </a>
                 </article>
             </section>
         </main>
 
-        <footer>apelou<br />2023<br />contact</footer>
+        <footer>
+            <a href="#"> APE'Lou </a>
+            2023
+            <a href="mailto:apelou33450@gmail.com">contact</a>
+        </footer>
     </body>
 </html>

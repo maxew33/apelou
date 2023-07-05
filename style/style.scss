@@ -18,7 +18,6 @@ html {
 
 body {
     background: #f9f9f9;
-    height: 200vh;
     overflow-x: hidden;
 }
 
@@ -96,9 +95,10 @@ main {
 .title {
     width: 100%;
     aspect-ratio: 15/2;
-    background-image: url('../img/leohoho-rngTKHXumy0-unsplash.jpg');
+    background-image: url('../img/salvatore-ventura-nNe4HwY_iY0-unsplash.jpg');
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
 
     .text {
         font-size: 4rem;
@@ -108,7 +108,8 @@ main {
         text-transform: capitalize;
         width: 100%;
         height: 100%;
-        background: radial-gradient(closest-side, #ffffff55 30%, #ffffff00 50%);
+        // background: radial-gradient(closest-side, #ffffff55 30%, #ffffff00 50%);
+    background: #ffffffaa;
     }
 }
 
@@ -120,37 +121,37 @@ article {
     // gap: 2rem;
 }
 
-#school{
+#school {
     p {
         display: flex;
-        gap:.5rem;
+        gap: 0.5rem;
         font-size: 1.25rem;
     }
 
-    article{
-        p:nth-of-type(odd) .school-img{
-        border-top-left-radius: 7.5vmin;
+    article {
+        p:nth-of-type(odd) .school-img {
+            border-top-left-radius: 7.5vmin;
         }
-        
-        p:nth-of-type(even) .school-img{
+
+        p:nth-of-type(even) .school-img {
             border-top-right-radius: 7.5vmin;
-            }
+        }
     }
+}
 
-} 
-
-.school-img{
+.school-img {
     width: 100%;
     height: 75%;
     object-fit: cover;
 }
 
-.school-name{
+.school-name {
     text-transform: capitalize;
     font-size: 2rem;
 }
 
-p, .links-link {
+p,
+.links-link {
     width: 30vw;
     min-width: 20rem;
     background: var(--bg-p);
@@ -162,15 +163,17 @@ p, .links-link {
     justify-content: space-around;
     text-align: center;
     padding: 2rem;
+    box-shadow: 2px 2px 2px 0px #d1d1d1;
+}
+
+.semi-pills {
     border-radius: 0 10vmin 0 10vmin;
+    &:nth-child(odd) {
+        border-radius: 10vmin 0 10vmin 0;
+    }
 }
-
-p:nth-child(odd) {
-    border-radius: 10vmin 0 10vmin 0;
-}
-
-#links{
-    article{
+#links {
+    article {
         flex-wrap: wrap;
     }
 }
@@ -178,8 +181,28 @@ p:nth-child(odd) {
 .links-link {
     margin: 1rem auto;
     height: 5rem;
+    text-transform: capitalize;
 }
 
-.pills{
+.pills {
     border-radius: 10vmin;
+}
+
+footer{
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: nth(nth($colors, 5),2);
+}
+
+@media screen and (max-width:800px) {
+    :root{
+        font-size: 10px;
+    }
+    article {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
 }
