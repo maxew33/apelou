@@ -64,6 +64,7 @@
             src="https://kit.fontawesome.com/a53308940c.js"
             crossorigin="anonymous"
         ></script>
+        <script src="./script/script.js" async></script>
     </head>
     <body>
         <header class="banner">
@@ -74,9 +75,10 @@
                 </a>
 
                 <nav>
-                    <a href="#school">écoles</a>
-                    <a href="#links">liens utiles</a>
-                    <a href="#contact">contact</a>
+                    <a href="#school" class="nav-item">écoles</a>
+                    <a href="#links" class="nav-item">liens utiles</a>
+                    <a href="#join" class="nav-item">adhérer</a>
+                    <a href="#contact" class="nav-item">contact</a>
                 </nav>
             </section>
         </header>
@@ -105,7 +107,7 @@
                 </article>
             </section>
 
-            <section id="school">
+            <section id="school" data-id="0">
                 <header class="title">
                     <span class="text">Les écoles</span>
                 </header>
@@ -188,7 +190,7 @@
                     </p>
                 </article>
             </section>
-            <section id="links">
+            <section id="links" data-id="1">
                 <header class="title">
                     <span class="text"> liens utiles </span>
                 </header>
@@ -224,7 +226,22 @@
                     </a>
                 </article>
             </section>
-            <section id="contact">
+            <section id="join" data-id="2">
+                <header class="title">
+                    <span class="text">Adhérer</span>
+                </header>
+                <div class="presentation">
+                    Vous voulez nous rejoindre ou nous soutenir ?
+                </div>
+                <iframe
+                    id="haWidget"
+                    allowtransparency="true"
+                    scrolling="auto"
+                    src="https://www.helloasso.com/associations/ape-lou/adhesions/adhesion/widget"
+                    style="width: 100%; height: 750px; border: none"
+                ></iframe>
+            </section>
+            <section id="contact" data-id="3">
                 <header class="title">
                     <span class="text"> contact </span>
                 </header>

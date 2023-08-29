@@ -66,14 +66,16 @@ html {
 
 :root {
   --bg-p: red;
-}
-
-main section:nth-child(2) {
-  --bg-p: #E5F185;
+  --bg-color: blue;
+  --scale-value: 0;
 }
 
 main section:nth-child(1) {
   --bg-p: #A6D5F2;
+}
+
+main section:nth-child(2) {
+  --bg-p: #E5F185;
 }
 
 main section:nth-child(3) {
@@ -128,6 +130,66 @@ body {
   align-self: flex-end;
   font-size: 1.15rem;
   text-transform: capitalize;
+}
+.banner .nav-item {
+  position: relative;
+}
+.banner .nav-item:hover {
+  --scale-value: 1;
+}
+.banner .nav-item:nth-child(0) {
+  --bg-color: #A6D5F2;
+}
+.banner .nav-item {
+  position: relative;
+}
+.banner .nav-item:hover {
+  --scale-value: 1;
+}
+.banner .nav-item:nth-child(1) {
+  --bg-color: #E5F185;
+}
+.banner .nav-item {
+  position: relative;
+}
+.banner .nav-item:hover {
+  --scale-value: 1;
+}
+.banner .nav-item:nth-child(2) {
+  --bg-color: #F686BC;
+}
+.banner .nav-item {
+  position: relative;
+}
+.banner .nav-item:hover {
+  --scale-value: 1;
+}
+.banner .nav-item:nth-child(3) {
+  --bg-color: #F9AD8A;
+}
+.banner .nav-item {
+  position: relative;
+}
+.banner .nav-item:hover {
+  --scale-value: 1;
+}
+.banner .nav-item:nth-child(4) {
+  --bg-color: #FEEE7F;
+}
+.banner .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--bg-color);
+  transition: transform 0.25s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(var(--scale-value));
+}
+.banner .displayed::after {
+  --scale-value: 1;
 }
 
 h2 {
