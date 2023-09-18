@@ -114,8 +114,9 @@ main {
     max-width: 1600px;
     margin: 4rem auto;
 
-    section {
+    section:not(:nth-child(1)) {
         margin: 2rem auto;
+        padding-top: min(75px, 10vmin);
     }
 
     .presentation {
@@ -231,6 +232,7 @@ footer {
     align-items: center;
     justify-content: space-evenly;
     background: nth(nth($colors, 5), 2);
+    font-size: 1.75rem;
 }
 
 @media screen and (max-width: 800px) {
