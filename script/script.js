@@ -1,5 +1,3 @@
-console.log('loaded')
-
 const navItems = document.querySelectorAll('.nav-item')
 let formerId = 0
 
@@ -7,21 +5,22 @@ let formerId = 0
 const options = {
   root: null, // The element that is used as the viewport for checking visibility of the target - null => the browser viewport
   rootMargin: '0px', //Margin around the root.
-  threshold: 0.6 // 60% of the element is visible
+  threshold: 0.2 // 60% of the element is visible
 }
 
 const observer = new IntersectionObserver(handleObserver, options)
 
 // Targeting an element to be observed
 
-const targets = document.querySelectorAll('section')
+const targets = document.querySelectorAll('.section')
+console.log(targets)
 
 targets.forEach(target => {
-  console.log(target)
   observer.observe(target)
 })
 
 const underline = (id) => {
+
   navItems[formerId].classList.remove('displayed')
   navItems[id].classList.add('displayed')
   formerId = id

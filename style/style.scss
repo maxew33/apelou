@@ -73,7 +73,7 @@ body {
                 --scale-value: 1;
             }
 
-            $pos : nth($color, 1) - 1;
+            $pos: nth($color, 1) - 1;
 
             &:nth-child(#{$pos}) {
                 --bg-color: #{nth($color, 2)};
@@ -156,7 +156,7 @@ article {
     justify-content: space-around;
     max-width: 1600px;
     margin: auto;
-    // gap: 2rem;
+    flex-wrap: wrap;
 }
 
 #school {
@@ -240,8 +240,20 @@ footer {
         font-size: 10px;
     }
     article {
-        flex-direction: column;
-        align-items: center;
         gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner {
+        section {
+            padding: 0;
+        }
+        nav {
+            display: none;
+        }
+        .logo {
+            margin: auto;
+        }
     }
 }
