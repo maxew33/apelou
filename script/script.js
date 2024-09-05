@@ -31,3 +31,7 @@ function handleObserver(entries, observer){
     entry.isIntersecting && underline(entry.target.dataset.id)
   })
 }
+
+const yearSpan = document.querySelector('.year')
+const currentYear = new Date().getFullYear()
+yearSpan.innerText = currentYear
